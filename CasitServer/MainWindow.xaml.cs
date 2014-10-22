@@ -17,6 +17,8 @@ using System.Net.Sockets;
 using System.Threading;
 using System.Windows.Threading;
 
+
+
 namespace CasitServer
 {
     #region 异步处理类
@@ -28,6 +30,8 @@ namespace CasitServer
         // Size of receive buffer.     
         public const int BufferSize = 1024;
         // Receive buffer.     
+		
+		
         public byte[] buffer = new byte[BufferSize];
         // Received data string.     
         public StringBuilder sb1 = new StringBuilder();
@@ -36,6 +40,7 @@ namespace CasitServer
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+	
     public partial class MainWindow : Window
     {
         public MainWindow()
@@ -49,6 +54,7 @@ namespace CasitServer
             tbIP.Text = Ip.ToString();
         }
 
+		
         #region init
         private IPHostEntry ipHostInfo = new IPHostEntry();
         private IPAddress Ip;
